@@ -1,0 +1,153 @@
+:root {
+   --white-color: #fff;
+   --black-color: #000;
+   --text-color: #333;
+   --primary-color: #ee4d2d;
+   --header-height: 120px;
+   --navbar-height: 34px;
+   --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+   --star-gold-color: #ffce3e;
+   --header__sort-bar-height: 46px;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+
+html {
+    /* 16px */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto' , sans-serif;
+    box-sizing: border-box;
+}
+
+p {
+    /* tuong duong 16px */
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+
+}
+
+/* responsive */
+
+
+.grid__row {
+    display: flex;
+    /* khi co do dai vuot qua thi wrap tu dong nhay xuong hang */
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+
+}
+
+.grid__column-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%; 
+    /* 10/12*100 */
+
+}
+.btn1 {
+    min-width: 124px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6rem;
+    background-color: var(--white-color);
+}
+
+.btn {
+    min-width: 124px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--white-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6rem;
+    background-color: var(--primary-color);
+}
+
+/* select-input */
+.select-input {
+    position: relative;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    min-width: 200px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+/* pagination */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+
+}
+.pagination-item {
+    margin: 0 7px;
+
+}
+.pagination-item__link {
+    --height : 30px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    display: block;
+    /* căn giữa theo chiều ngang */
+    text-align: center;
+    /* căn theo chiều dọc */
+    /* chỉnh sửa theo kích thước của height */
+    line-height: var(--height);
+    border-radius: 2px;
+}
+
+.pagination-item--active .pagination-item__link {
+
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination-item--active .pagination-item__link:hover {
+    background-color: rgb(248, 93, 93);
+}
