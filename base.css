@@ -1,0 +1,165 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+}
+
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    /* 16px */
+    font-size: 62.5%;
+    /* font-size: 1rem; */
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid_row {
+    display : flex;
+    flex-wrap: wrap;
+}
+
+@keyframes fadeID {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--grow-from));
+    }
+    to {
+        transform: scale(var(--grow-to));
+
+    }
+}
+
+
+/* modal */
+.modal {
+    position: fixed;
+    top:0;
+    right: 0;
+    left:0;
+    bottom:0;
+    display: flex;
+    /* display: none; */
+    animation: fadeID ease-in 1s;
+
+
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(49, 42, 42, 0.2);
+    z-index: 1;
+
+}
+
+.modal__body {
+    /* width: 700px;
+    height: 600px; */
+    --grow-from : 0.5;
+    --grow-to: 1;
+    background-color: rgb(236, 243, 248);
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    border-radius: 5px;
+    /* animation */
+    animation: growth ease-in 1s ;
+}
+
+.btn {
+    min-width: 142px;
+    height: 36px;
+    text-decoration: none;
+    border-radius: 3px;
+    border: none;
+    font-size: 1.4rem;
+    /* display: flex;
+    align-items: center; */
+    padding: 0;
+    margin-right: 8px;
+    
+
+}
+
+.btn.btn--primary {
+    color: aliceblue;
+    background-color: rgb(231, 17, 17);
+
+}
+
+.btn:hover {
+    background-color: rgb(190, 219, 255);
+
+}
+
+.btn.btn--disabled {
+    color: #ccc;
+    cursor: default;
+    background-color: #999;
+}
+
+/* pagination */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+
+
+.pagination_item--active .pagination_link {
+    background-color: rgb(59, 143, 246);
+    color: #fff;
+
+}
+
+.pagination_item {
+    margin: 20px 5px ;
+
+}
+
+.pagination_link {
+    display: block;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #999;
+    min-width: 30px;
+    height: 30px;
+    text-align: center;
+   line-height: 30px;
+   border-radius: 2px;
+
+}
+
+.pagination_item-icon {
+   font-size: 1.9rem;
+}

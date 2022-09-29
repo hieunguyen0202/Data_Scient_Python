@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Bai id & class in CSS</title>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="Bai2_ID&CLASS.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+            <div>
+                <!-- dung ID thì cho dùng 1 cái -->
+                <h1 id="so1">Bai số ID và CLASS</h1>
+                <h1 id="dong3">Bai số ID và CLASS</h1>
+                <!-- dùng class thì chúng ta có thể dùng cho nhiều phần tử -->
+                <h1 class="same">Bai số ID và CLASS</h1>
+                <h1 class="same">Bai số ID và CLASS</h1>
+
+
+            </div>
+            
+
+ <div id="toast">
+
+
+ </div>
+
+
+                    <!-- sucess -->
+<!-- <div>
+    <div class="toast toast--sucess">
+      <div class="toast__icon">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <div class="toast__body">
+        <h3 class="toast__title_h3">Success</h3>
+        <p class="toast__msg">Ban da login thanh cong</p>
+  
+      </div>
+      <div class="toast__close"></div>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+  
+  </div> -->
+  <!-- nhap -->
+          <!-- sucess -->
+          <!-- <div>
+            <div class="toast toast--info">
+              <div class="toast__icon">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <div class="toast__body">
+                <h3 class="toast__title_h3">Info</h3>
+                <p class="toast__msg">Ban da login thanh cong</p>
+          
+              </div>
+              <div class="toast__close"></div>
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+          
+          </div> -->
+          <!-- nhap -->
+                  <!-- sucess -->
+  <!-- <div>
+    <div class="toast toast--warning">
+      <div class="toast__icon">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <div class="toast__body">
+        <h3 class="toast__title_h3">Warning</h3>
+        <p class="toast__msg">Ban da login </p>
+  
+      </div>
+      <div class="toast__close"></div>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+  
+  </div> -->
+  <!-- nhap -->
+   <button  onclick="ShowSuccess()">
+    Show success
+   </button>
+   <button onclick="ShowInfo()">
+    Show info
+   </button>
+
+   <button onclick="ShowWarning()">
+    Show error
+   </button>
+
+   <script>
+    function toast({ title = '', 
+                    message = '', 
+                    type = 'info', 
+                    duration = 3000 }) {
+                      const main = document.getElementById('toast');
+                      if (main) {
+                         const toast = document.createElement('div');
+
+                         const autoRemoteID =  setTimeout(function() {
+                          main.removeChild(toast);
+                         }, duration + 1000);
+
+                         toast.onclick = function(e) {
+                          if (e.target.closest('.toast__close')) {
+                            main.removeChild(toast);
+                            clearTimeout(autoRemoteID);
+                          }
+                         }
+
+                         const icons = {
+                          success: 'fa-circle-check',
+                          info: 'fa-circle-info',
+                          warning: 'fa-circle-exclamation'
+
+                         };
+                         const icon = icons[type];
+                         const delay = (duration / 1000).toFixed(2);
+                         toast.classList.add('toast', `toast--${type}`);
+                         toast.style.animation = `slideInLeft ease .5s, fadeOut linear 1s ${delay}s forwards`;
+                         toast.innerHTML = `
+                         <div class="toast__icon">
+                          <i class="fa-solid ${icon}"></i>
+                        </div>
+                        <div class="toast__body">
+                          <h3 class="toast__title_h3">${title}</h3>
+                          <p class="toast__msg">${message}</p>
+                    
+                        </div>
+                        <div class="toast__close">
+                          <i class="fa-solid fa-xmark"></i>
+                          </div>
+                         
+                        </div>
+
+                         `;
+                         main.appendChild(toast);
+                        
+                      }
+
+           }
+
+    
+
+    function ShowSuccess() {
+      toast({
+      title: 'Success',
+      message:'You are logined Successfully',
+      type:'success',
+      duration: 10000
+    })
+
+    }
+    function ShowInfo() {
+      toast({
+      title: 'Info',
+      message:'You are created user successfully',
+      type:'info',
+      duration: 10000
+    })
+
+    }
+    function ShowWarning() {
+      toast({
+      title: 'Warning',
+      message:'You have the wrong password or email',
+      type:'warning',
+      duration: 10000
+    })
+
+   }
+
+   </script>
+
+
+
+
+    </body>
+
+</html>

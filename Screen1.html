@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login in system</title>
+        <link href="//fonts.googleapis.com/css?family=Sirin+Stencil" rel="stylesheet">
+        <meta charset="utf-8">
+        <style>
+             .image {
+                width: 55%;
+                height: 700px;
+                float: left;
+
+}
+              .box {
+                width: 45%;
+                height: 700px;
+                color: azure;
+                background-color: rgb(56, 68, 74);
+                float: left;
+               
+
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+              .type_login {
+                text-align: center;
+                font: 300;
+                font-size: 2em;
+                margin-bottom: 60px;
+              }
+
+              .style_form {
+                text-align: center;
+                font: 300;
+                font-family: 1.2em;
+
+              }
+
+              #fname {
+                margin-bottom: 20px;
+                width: 400px;
+                height: 40px;
+                border: none;
+                border-radius: 12px;
+              }
+
+              #lname {
+                width: 400px;
+                height: 40px;
+                border: none;
+                border-radius: 12px;
+              }
+
+              #style_namef {
+                margin-right: 300px;
+              
+              }
+              
+              #style_namel {
+                margin-right: 335px;
+     
+              }
+
+              #button_set {
+                margin-top: 20px;
+                width: 100px;
+                height: 40px;
+                border: solid rgb(48, 62, 74);
+                background-color: rgb(60, 104, 119);
+                border-radius: 20px;
+                font-size: 1.2em;
+
+
+                
+              }
+              
+              #style_or {
+                margin-top: 40px;
+                text-align: center;
+                font-size: 0.8em;
+              }
+
+
+              #button_drive {
+                margin-top: 40px;
+                margin-left: 130px;
+                margin-bottom: 20px;
+                width: 400px;
+                height: 40px;
+                border: solid rgb(131, 208, 244);
+                background-color: rgb(114, 181, 239);
+               
+              }
+              #button_fb {
+                
+                margin-left: 130px;
+                width: 400px;
+                height: 40px;
+                border: solid rgb(34, 102, 227);
+                background-color: rgb(16, 86, 236);
+               
+              }
+        </style>
+       
+
+    </head>
+
+    <body>
+        <nav>
+            <img class="image", src="https://mswebappcdn.azureedge.net/episerverprod/0145c95d01fc4fd889ff0d603c83f214/828ee3b287be4d419f33cf65d1d96ec3.png" alt="Ảnh minh họa">
+        </nav>
+        <article>
+
+            
+            <div class="box">
+                <h1 class="type_login">Đăng nhập</h1>
+
+                <form class="style_form", action="/action_page.php">
+                    <label id="style_namef" for="fname">Tên đăng nhập:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label id="style_namel" for="lname">Mật khẩu:</label><br>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <input id="button_set" type="submit" value="Login">
+                  </form>
+
+                  <h2 id="style_or" >_________________OR_________________</h2> <br>
+
+                  
+                <input id="button_drive" type="submit" value="Đăng nhập bằng google drive"><br>
+                <input id="button_fb" type="submit" value="Đăng nhập bằng facebook"><br>
+                  
+
+                
+            </div>
+
+
+            
+           
+
+
+        </article>
+        
+    </body>
+</html>
+
+
+
+
+
+<!--{% extends 'admin/base.html' %}-->
+
+<!--{% block body %}-->
+
+<!--    {% if current_user.is_authenticated %}-->
+<!--      <h1 class="text-info"> Chao mung <span class="text-danger">{{ current_user.name }}</span> den website!!!</h1>-->
+<!--    {% else %}-->
+<!--        <h1 class="text-info text-center">Dang Nhap</h1>-->
+<!--        <form method="post" action="{{ url_for('admin_login') }}">-->
+<!--          <div class="form-group">-->
+<!--            <label for="username">Username:</label>-->
+<!--            <input type="text" class="form-control" name="username" placeholder="Enter username..." id="username">-->
+<!--          </div>-->
+<!--          <div class="form-group">-->
+<!--            <label for="pwd">Password:</label>-->
+<!--            <input type="password" class="form-control" name="password" placeholder="Enter password..." id="pwd">-->
+<!--          </div>-->
+
+<!--          <button type="submit" class="btn btn-primary">Dang nhap</button>-->
+<!--        </form>-->
+<!--    {% endif %}-->
+
+<!--{% endblock %}-->

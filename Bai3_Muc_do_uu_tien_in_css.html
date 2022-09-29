@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bai mức độ ưu tiên trong CSS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Test_uu_tien.css">
+        <style>
+            h1 {
+                color:rgb(196, 228, 244);
+                color:#f8f9fa
+            }
+            /* sẽ ưu tiên chọn color_change do class - 10 lớn hơn tag - 1 */
+            .color_change {
+                color:blueviolet;
+            }
+            #change {
+                color: aqua;
+            }
+
+        </style>
+<!-- ông nào được gọi trc thì sẽ dùng trc trong external bà internal -->
+    </head>
+    <body>
+        <div>
+            <!-- <h1 style="color: black;"; id="change"; class="color_change">Priority?</h1> -->
+            <h1  id="change"; class="color_change">Priority?</h1>
+            <ol>
+                <li>Internal, External</li>
+                <li>Inline - 1000</li>
+                <li>#id - 100</li>
+                <li>.class - 10</li>
+                <li>tag - 1</li>  
+                <li>Equal specticify?</li>
+                <li>Universal selector and inherited?</li>
+            </ol>
+        </div>
+
+    </body>
+</html>

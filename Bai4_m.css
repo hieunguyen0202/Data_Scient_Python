@@ -1,0 +1,14 @@
+
+/* đặt biến toàn cục */
+:root {
+    --kieu-color: green;
+}
+
+h1 {
+    color: var(--kieu-color);
+}
+
+h2 {
+     --my-color: red;
+    color: var(--my-color);
+}

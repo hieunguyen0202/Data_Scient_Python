@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List and camera</title>
+        <meta charset="utf-8">
+        <style>
+
+            #st_ahome {
+                width: 100%;
+                height: 400px;
+            }
+
+            .text {
+                    font-size: 3em;
+                    margin-left: 500px;
+                    color: #fff;
+                    position: absolute;
+                    top: 100px
+
+            }
+            #box2 {
+                width: 100%;
+                height: 500px;
+                color: azure;
+                background-color: rgb(179, 202, 213);
+                float: left;
+               
+            }
+
+            .box3 {
+                width: 49.7%;
+                height: 500px;
+                color: azure;
+                background-color: rgb(71, 110, 132);
+                float: left;
+               
+            }
+
+            .box4 {
+                width: 49.7%;
+                height: 500px;
+                color: azure;
+                background-color: rgb(186, 218, 237);
+                float: right;
+               
+            }
+            .box5 {
+                margin-top: 20px;
+            }
+           
+            @media (max-width: 600px) {
+                nav, article {
+                width: 100%;
+                height: auto;
+                 }
+                }
+
+            @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+            .blue { color: #185875; }
+            .yellow { color: #4868a2; }
+
+            .container th h1 {
+                font-weight: bold;
+                font-size: 1.6em;
+            text-align: center;
+            color: #f1f7fa;
+            }
+
+            .container td {
+                font-weight: normal;
+                font-size: 1.6em;
+            -webkit-box-shadow: 0 2px 2px -2px #09343a;
+                -moz-box-shadow: 0 2px 2px -2px #5e6d98;
+                    box-shadow: 0 2px 2px -2px #95acea;
+            }
+
+            .container {
+                text-align: center;
+                overflow: hidden;
+                width: 100%;
+                margin: 10px auto;
+                display: table;
+                padding: 0 0 8em 0;
+            }
+
+            .container td, .container th {
+                padding-bottom: 2%;
+                padding-top: 2%;
+            padding-left:2%;  
+            }
+
+            /* Background-color of the odd rows */
+            .container tr:nth-child(odd) {
+                background-color: rgb(186, 218, 237);
+            }
+
+            /* Background-color of the even rows */
+            .container tr:nth-child(even) {
+                background-color: #5ca9c5;
+            }
+
+
+            /* Chỉnh màu chữ của bảng */
+            .container th {
+                background-color: #0376a0;
+            }
+
+            .container td:first-child { color: #03070b; }
+
+            .container tr:hover {
+            background-color: #6a919a;
+            -webkit-box-shadow: 0 6px 6px -6px #a0a2a6;
+                -moz-box-shadow: 0 6px 6px -6px #cfd3e0;
+                    box-shadow: 0 6px 6px -6px #abb3c8;
+            }
+
+            .container td:hover {
+            background-color: #0f2d41;
+            color: #9bdfef;
+            font-weight: bold;
+            
+            box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+            transform: translate3d(6px, -6px, 0);
+            
+            transition-delay: 0s;
+                transition-duration: 0.4s;
+                transition-property: all;
+            transition-timing-function: line;
+            }
+
+            @media (max-width: 800px) {
+            .container td:nth-child(4),
+            .container th:nth-child(4) { display: none; }
+            }
+
+            .st_name {
+                text-align: center;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="box">
+
+             <h1 class="text">GIÁM SÁT AN NINH</h1>
+            <img id="st_ahome" src="https://png.pngtree.com/background/20210710/original/pngtree-dark-blue-technology-intelligent-ai-era-banner-poster-picture-image_1013294.jpg" alt="anh_home" >
+            
+            
+        </div>
+        <div id="box2">
+            <nav class="box3"></nav>
+            <article class="box4"></article><br>
+            
+           
+
+        </div> 
+
+        <div id="box5">
+            <table class="container" cellpadding="10">
+                <thead>
+                  <tr>
+                    <th><h1 class="st_name">NHÂN VIÊN</h1></th>
+                    <th><h1 class="st_name">PHÒNG BAN</h1></th>
+                    <th><h1 class="st_name">NỘI QUY</h1></th>
+                    <th><h1 class="st_name">NGÀY</h1></th>
+                    <th><h1 class="st_name">TIỀN SINH HOẠT</h1></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Google</td>
+                    <td>9518</td>
+                    <td>6369</td>
+                    <td>01:32:50</td>
+                    <td>01:32:50</td>
+                  </tr>
+                  <tr>
+                    <td>Twitter</td>
+                    <td>7326</td>
+                    <td>10437</td>
+                    <td>00:51:22</td>
+                    <td>01:32:50</td>
+                  </tr>
+                  <tr>
+                    <td>Amazon</td>
+                    <td>4162</td>
+                    <td>5327</td>
+                    <td>00:24:34</td>
+                    <td>01:32:50</td>
+                  </tr>
+                  <tr>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                    <td>01:32:50</td>
+                  </tr>
+                  <tr>
+                    <td>CodePen</td>
+                    <td>2002</td>
+                    <td>4135</td>
+                    <td>00:46:19</td>
+                    <td>01:32:50</td>
+                  </tr>
+                  <tr>
+                    <td>GitHub</td>
+                    <td>4623</td>
+                    <td>3486</td>
+                    <td>00:31:52</td>
+                    <td>01:32:50</td>
+                  </tr>
+                </tbody>
+              </table>
+            
+        </div>
+
+
+
+    </body>
+</html>
